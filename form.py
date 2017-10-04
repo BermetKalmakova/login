@@ -6,7 +6,7 @@ dict = {'Bermet':'Sonal'}
 
 app.secret_key = "this is totally secret"
 
-@app.route('/')
+@app.route('/',methods = ['POST','GET'])
 def root():
     if 'username' in session:
         return render_template('welcome.html',username=session['username'])
